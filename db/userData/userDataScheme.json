@@ -1,0 +1,29 @@
+{
+  "bio": { "__format": "string" },
+  "name": {
+    "__format": "object",
+    "fName": { "__format": ["boolean", "string"] },
+    "lName": { "__format": ["boolean", "string"] },
+    "mName": { "__format": ["boolean", "string"] }
+  },
+  "profilePhoto": { "__format": "string" },
+  "dob": {
+    "__format": "object",
+    "month": { "__format": ["boolean", "number"] },
+    "year": { "__format": ["boolean", "number"] },
+    "date": { "__format": ["boolean", "number"] }
+  },
+  "email": { "__format": ["boolean", "string"] },
+  "email_verified": { "__format": "boolean" },
+  "phoneNo": {
+    "__format": ["string", "object"],
+
+    "countryCode": { "__format": "number" },
+    "number": { "__format": "number" }
+  },
+  "phoneNo_verified": { "__format": "boolean" },
+  "additional": {
+    "__format": "any"
+  },
+  "account_disabled": { "__format": "boolean" }
+}

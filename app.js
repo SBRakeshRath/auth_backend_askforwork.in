@@ -34,17 +34,22 @@ const firebaseApp = initializeApp({
   credential: admin.credential.cert(serviceAccountObj),
 });
 app.set("firebaseApp", firebaseApp);
+const defaultFirestore = getFirestore();
+app.set("fdb" , defaultFirestore)
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+// root path set 
+app.set("root_path",__dirname)
 
 // cors set-up
 
 app.use(
   cors({
     origin: [
-      "http://auth.askforwork.in",
+      'http://auth.askforwork.in' ,
       "http://askforwork.in",
       "https://auth.askforwork.in",
       "https://askforwork.in",
